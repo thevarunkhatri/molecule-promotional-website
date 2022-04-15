@@ -67,22 +67,22 @@ export default function Home() {
               description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
             <Feature
               tag="Pen" 
-              header={<>It's the write thing to do.</>}
+              header="It's the write thing to do."
               description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
           </div>
           <div className={`${styles.software} container`}>
             <h2>Software</h2>
             <Feature
               tag="Homepage" 
-              header={<>All the app's a canvas.</>}
+              header="All the app's a canvas."
               description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
             <Feature
               tag="Web Browser" 
-              header={<>Weave your own web.</>}
+              header="Weave your own web."
               description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
             <Feature
               tag="Saved Items" 
-              header={<>Never lose what you love.</>}
+              header="Never lose what you love."
               description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
           </div>
         </div>
