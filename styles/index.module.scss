@@ -1,0 +1,174 @@
+.wrapper {
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(to bottom, rgba(255,251,248, 1) 60%, rgba(255,251,248, 0) 100%);
+		z-index: 500;
+		// background: linear-gradient(to bottom, rgba(255, 0, 0, 1) 40%, rgba(255, 0, 0, 0) 100%);
+		
+		ul {
+			height: 120px;
+			max-width: 800px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			padding: 0;
+			align-items: center;
+			justify-content: center;
+			gap: 60px;
+			
+			li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+		}
+	}
+	
+	main {
+		.hero {
+			position: relative;
+			padding-top: calc(120px + 10vh);
+			
+			.heroCopy {
+				max-width: 800px;
+				width: 80vw;
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				gap: 12px;
+				
+				h1, p {
+					margin: 0;
+				}
+				
+				p {
+					max-width: 600px;
+				}
+			}
+			
+			.flatRender {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		
+		.features {
+			h2 { 
+				text-align: center;
+				margin: 0;
+				font-size: 44px;
+				color: #C74DAC;
+			}
+			.featureGrid {
+				display: grid;
+				height: 600px;
+				
+				.featureText, .featureImage {
+					align-self: center
+				}
+				
+				.featureText {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					
+					
+					span, h3, p {
+						margin: 0;
+					}
+					
+					span {
+						padding: 12px;
+						border-radius: 6px;
+						background: #653EBF;
+						color: white;
+						margin-bottom: 8px;
+					}
+					
+					h3 {
+						font-size: 36px;
+						color: #E0674D;
+						margin-bottom: 20px;
+					}
+					
+					p {
+						font-size: 18px;
+					}
+				}
+			}
+			
+			.hardware {
+				// padding: 20px;
+				
+				.featureGrid {
+					&:nth-child(even) {
+						grid-template-columns: 2fr 3fr;
+						
+						.featureImage {
+							order: 2
+						}
+						
+						.featureText {
+							order: 1
+						}
+					}
+					
+					&:nth-child(odd) {
+						grid-template-columns: 3fr 2fr;
+						
+						.featureImage {
+							order: 1
+						}
+						
+						.featureText {
+							order: 2
+						}
+					}
+				}
+			}
+			
+			.software {
+				// padding: 20px;
+				
+				.featureGrid {
+					&:nth-child(odd) {
+						grid-template-columns: 2fr 3fr;
+						
+						.featureImage {
+							order: 2
+						}
+						
+						.featureText {
+							order: 1
+						}
+					}
+					
+					&:nth-child(even) {
+						grid-template-columns: 3fr 2fr;
+						
+						.featureImage {
+							order: 1
+						}
+						
+						.featureText {
+							order: 2
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		padding: 40px 0;
+		background: #653EBF;
+		color: #FFFBF8;
+	}
+}
