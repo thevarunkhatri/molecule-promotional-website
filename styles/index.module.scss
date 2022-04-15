@@ -4,7 +4,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: linear-gradient(to bottom, rgba(255,251,248, 1) 60%, rgba(255,251,248, 0) 100%);
+		background: linear-gradient(to bottom, rgba(255,251,248, 1) 60%, rgba(255,251,248, .9) 70%, rgba(255,251,248, 0) 100%);
 		z-index: 500;
 		// background: linear-gradient(to bottom, rgba(255, 0, 0, 1) 40%, rgba(255, 0, 0, 0) 100%);
 		
@@ -85,17 +85,20 @@
 					}
 					
 					span {
-						padding: 12px;
+						padding: 10px 16px;
 						border-radius: 6px;
 						background: #653EBF;
 						color: white;
-						margin-bottom: 8px;
+						margin-bottom: 12px;
+						font-family: lexia-mono, serif;
+						text-transform: uppercase;
+						line-height: 100%
 					}
 					
 					h3 {
 						font-size: 36px;
 						color: #E0674D;
-						margin-bottom: 20px;
+						margin-bottom: 16px;
 					}
 					
 					p {
