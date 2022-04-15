@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </main>
       <footer>
-        <div class="container">
+        <div className="container">
           <div>
             <h4>Molecule</h4>
             <p>Tagline goes here</p>
