@@ -50,6 +50,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/zrr8nta.css"/>
       </Head>
+      <div className={styles.mobileLogoGradient}></div>
       <nav className={scrollTop > 20 ?  "hidden" : null}>
         <ul>
           <li><a href="https://www.google.com">Hardware</a></li>
@@ -77,33 +78,37 @@ export default function Home() {
         <div className={styles.features}>
           <div className={`${styles.hardware} container`}>
             <h2>Hardware</h2>
-            <Feature 
-              tag="Case" 
-              header={<>Key actions. <br/> Right at your fingertips.</>}
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
-            <Feature
-              tag="App Dock" 
-              header={<>Is your app running? <br/> Then catch it!</>}
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
-            <Feature
-              tag="Pen" 
-              header="It's the write thing to do."
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+            <div className={styles.featureSection}>
+              <Feature 
+                tag="Case" 
+                header={<>Key actions. <br/> Right at your fingertips.</>}
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+              <Feature
+                tag="App Dock" 
+                header={<>Is your app running? <br/> Then catch it!</>}
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+              <Feature
+                tag="Pen" 
+                header="It's the write thing to do."
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+            </div>
           </div>
           <div className={`${styles.software} container`}>
             <h2>Software</h2>
-            <Feature
-              tag="Homepage" 
-              header="All the app's a canvas."
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
-            <Feature
-              tag="Web Browser" 
-              header="Weave your own web."
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
-            <Feature
-              tag="Saved Items" 
-              header="Never lose what you love."
-              description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+            <div className={styles.featureSection}>
+              <Feature
+                tag="Homepage" 
+                header="All the app's a canvas."
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+              <Feature
+                tag="Web Browser" 
+                header="Weave your own web."
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+              <Feature
+                tag="Saved Items" 
+                header="Never lose what you love."
+                description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
+            </div>
           </div>
         </div>
         <div className={styles.preorder}>

@@ -1,4 +1,18 @@
 .wrapper {
+	.mobileLogoGradient {
+		display: none;
+		
+		@media only screen and (max-width: 540px) {
+			display: block;
+			position: fixed;
+			top: 0;
+			z-index: 400;
+			height: 120px;
+			width: 100%;
+			background: linear-gradient(to bottom, rgba(255,251,248, 1) 50%, rgba(255,251,248, 0) 100%);
+		}
+	}
+	
 	nav {
 		position: fixed;
 		top: 0;
@@ -7,8 +21,12 @@
 		background: linear-gradient(to bottom, rgba(255,251,248, 1) 65%, rgba(255,251,248, 0) 100%);
 		z-index: 500;
 		opacity: 1;
-		transition: all 250ms cubic-bezier(0.83, 0, 0.17, 1);
+		transition: all 320ms cubic-bezier(0.83, 0, 0.17, 1);
 		// background: linear-gradient(to bottom, rgba(255, 0, 0, 1) 40%, rgba(255, 0, 0, 0) 100%);
+		
+		@media only screen and (max-width: 540px) {
+			display: none
+		}
 		
 		ul {
 			height: 120px;
@@ -21,6 +39,11 @@
 			justify-content: center;
 			gap: 60px;
 			
+			@media only screen and (max-width: 720px) {
+				height: 80px;
+				gap: 24px;
+			}
+			
 			li {
 				margin: 0;
 				padding: 0;
@@ -30,6 +53,10 @@
 				
 				&.logoPlaceholder {
 					width: 80px;
+					
+					@media only screen and (max-width: 540px) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -77,15 +104,29 @@
 		}
 		
 		.features {
+			
 			h2 { 
 				text-align: center;
 				margin: 0;
 				font-size: 44px;
 				color: #C74DAC;
 			}
+			
+			.featureSection {
+				display: flex;
+				flex-direction: column;
+				gap: 100px;
+			}
+			
 			.featureGrid {
 				display: grid;
-				height: 600px;
+				
+				@media only screen and (max-width: 540px) {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					gap: 40px;
+				}
 				
 				.featureText, .featureImage {
 					align-self: center
@@ -125,48 +166,65 @@
 			}
 			
 			.hardware {
-				// padding: 20px;
+				margin-top: 60px;
 				
 				.featureGrid {
 					&:nth-child(even) {
 						grid-template-columns: 2fr 3fr;
 						
 						.featureImage {
-							order: 2
+							order: 2;
+							
+							@media only screen and (max-width: 540px) {
+								order: 1;
+							}
 						}
 						
 						.featureText {
-							order: 1
+							order: 1;
+							
+							@media only screen and (max-width: 540px) {
+								order: 2;
+							}
 						}
 					}
 					
 					&:nth-child(odd) {
 						grid-template-columns: 3fr 2fr;
 						
+						
 						.featureImage {
-							order: 1
+							order: 1;
 						}
 						
 						.featureText {
-							order: 2
+							order: 2;
 						}
 					}
 				}
 			}
 			
 			.software {
-				// padding: 20px;
+				margin-top: 100px;
 				
 				.featureGrid {
 					&:nth-child(odd) {
 						grid-template-columns: 2fr 3fr;
 						
 						.featureImage {
-							order: 2
+							order: 2;
+							
+							@media only screen and (max-width: 540px) {
+								order: 1;
+							}
 						}
 						
 						.featureText {
-							order: 1
+							order: 1;
+							
+							@media only screen and (max-width: 540px) {
+								order: 2;
+							}
 						}
 					}
 					
@@ -187,6 +245,7 @@
 	}
 	
 	footer {
+		margin-top: 40px;
 		padding: 40px 0;
 		background: #653EBF;
 		color: #FFFBF8;
