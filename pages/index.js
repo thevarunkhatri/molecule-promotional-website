@@ -6,14 +6,17 @@ import Link from 'next/link'
 
 import styles from '../styles/index.module.scss'
 import Logo from '../public/logo.svg'
+import doubleDevice from '../public/doubleDevice.png'
 import flatRender from '../public/flatRender.png'
+import pen from '../public/pen.png'
+import appDock from '../public/appDock.png'
 
-function Feature({tag, header, description}) {
+function Feature({tag, header, description, image}) {
   return (
   <div className={styles.featureGrid}>
     <div className={styles.featureImage}>
       <Image
-      src={flatRender}
+      src={image}
       alt="flat render"/>
     </div>
     <div className={styles.featureText}>
@@ -56,7 +59,7 @@ export default function Home() {
           <li><a href="https://www.google.com">Hardware</a></li>
           <li><a href="https://www.google.com">Software</a></li>
           <li className={styles.logoPlaceholder}></li>
-          <li><a href="https://www.google.com">About</a></li>
+          <li><Link href="/about"><a>About</a></Link></li>
           <li><a href="https://www.google.com">Pre-Order</a></li>
         </ul>
       </nav>
@@ -71,7 +74,7 @@ export default function Home() {
           </div>
           <div className={styles.flatRender}>
             <Image
-              src={flatRender}
+              src={doubleDevice}
               alt="flat render"/>
           </div>
         </div>
@@ -80,14 +83,17 @@ export default function Home() {
             <h2>Hardware</h2>
             <div className={styles.featureSection}>
               <Feature 
+                image={flatRender}
                 tag="Case" 
                 header={<>Key actions. <br/> Right at your fingertips.</>}
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
               <Feature
+                image={appDock}
                 tag="App Dock" 
                 header={<>Is your app running? <br/> Then catch it!</>}
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
               <Feature
+                image={pen} 
                 tag="Pen" 
                 header="It's the write thing to do."
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
@@ -97,14 +103,17 @@ export default function Home() {
             <h2>Software</h2>
             <div className={styles.featureSection}>
               <Feature
+                image={flatRender}
                 tag="Homepage" 
                 header="All the app's a canvas."
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
               <Feature
+                image={appDock}
                 tag="Web Browser" 
                 header="Weave your own web."
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
               <Feature
+                image={pen}
                 tag="Saved Items" 
                 header="Never lose what you love."
                 description="Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna."/>
