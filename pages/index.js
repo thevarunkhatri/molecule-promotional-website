@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,6 +10,10 @@ import doubleDevice from '../public/doubleDevice.png'
 import flatRender from '../public/flatRender.png'
 import pen from '../public/pen.png'
 import appDock from '../public/appDock.png'
+
+import Nav from '../components/nav.js'
+import ThreeCanvas from '../components/threeCanvas.js'
+import Footer from '../components/footer.js'
 
 function Feature({tag, header, description, image}) {
   return (
@@ -54,15 +58,8 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/zrr8nta.css"/>
       </Head>
       <div className={styles.mobileLogoGradient}></div>
-      <nav className={scrollTop > 20 ?  "hidden" : null}>
-        <ul>
-          <li><a href="https://www.google.com">Hardware</a></li>
-          <li><a href="https://www.google.com">Software</a></li>
-          <li className={styles.logoPlaceholder}></li>
-          <li><Link href="/about"><a>About</a></Link></li>
-          <li><a href="https://www.google.com">Pre-Order</a></li>
-        </ul>
-      </nav>
+      <Nav scrollTop={scrollTop}/>
+      <ThreeCanvas/>
       <main>
         <div className={styles.heroLogo} id="heroLogo" style={{height: 80 + ((scrollTop - 20)/100) * 40 + 'px'}}>
           <Logo/>
@@ -124,15 +121,7 @@ export default function Home() {
         
         </div>
       </main>
-      <footer>
-        <div className="container">
-          <div>
-            <h4>Molecule</h4>
-            <p>Tagline goes here</p>
-          </div>
-          
-        </div>
-      </footer>
+      <Footer/>
     </div>
   )
 }
