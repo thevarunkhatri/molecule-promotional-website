@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react"
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,6 +26,22 @@ function Feature({tag, header, description}) {
 }
 
 export default function Home() {
+  const [scrollTop, setScrollTop] = useState(0);
+  
+  useEffect(() => {
+    setScrollTop(document.querySelector('#heroLogo').getBoundingClientRect().top)
+    window.addEventListener("scroll", onScroll);
+  
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+  
+  const onScroll = () => {
+    var distanceToTop = document.querySelector('#heroLogo').getBoundingClientRect().top;
+    setScrollTop(distanceToTop)
+  }
+  
+  
+  
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -32,19 +50,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/zrr8nta.css"/>
       </Head>
-      <nav>
+      <nav className={scrollTop > 20 ?  "hidden" : null}>
         <ul>
           <li><a href="https://www.google.com">Hardware</a></li>
           <li><a href="https://www.google.com">Software</a></li>
-          <li><a href="https://www.google.com"><Logo/></a></li>
+          <li className={styles.logoPlaceholder}></li>
           <li><a href="https://www.google.com">About</a></li>
           <li><a href="https://www.google.com">Pre-Order</a></li>
         </ul>
       </nav>
       <main>
+        <div className={styles.heroLogo} id="heroLogo" style={{height: 80 + ((scrollTop - 20)/100) * 40 + 'px'}}>
+          <Logo/>
+        </div>
         <div className={styles.hero}>
           <div className={styles.heroCopy}>
-            {/* <Logo/> */}
             <h1>A new way to experience the digital world.</h1>
             <p>Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna. Quisque malesuada tincidunt purus, sit amet euismod erat feugiat quis.</p>
           </div>
