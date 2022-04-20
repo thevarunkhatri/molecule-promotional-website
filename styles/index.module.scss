@@ -16,7 +16,7 @@
 	main {
 		.heroLogo {
 			position: sticky;
-			z-index: 500;
+			z-index: 550;
 			top: 20px;
 			display: flex;
 			justify-content: center;
@@ -43,8 +43,22 @@
 					margin: 0;
 				}
 				
+				h1 {
+					font-weight: 500;
+					
+				}
+				
 				p {
 					max-width: 600px;
+				}
+				
+				.button {
+					margin-top: 20px;
+					background: #4A347C;
+					color: white;
+					padding: 20px 24px;
+					border-radius: 6px; 
+					font-size: 18px;
 				}
 			}
 			
@@ -56,6 +70,8 @@
 		}
 		
 		.features {
+			position: relative;
+			z-index: 10;
 			
 			h2 { 
 				text-align: center;

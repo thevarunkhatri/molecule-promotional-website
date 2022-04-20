@@ -3,12 +3,13 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Loader, Stage, OrbitControls} from '@react-three/drei'
 
-import Model from './Model'
+{/* import Model from './Model' */}
+import Case from './Case'
 
-function Rig({ children }) {
+function Rig({ children, scrollTop}) {
   const rotater = useRef()
   useFrame(({ clock }) => {
-	rotater.current.rotation.y = clock.getElapsedTime() / 4 * Math.PI
+	rotater.current.rotation.y = (140 - scrollTop) / 60 * Math.PI
   })
   return (
 	<group position={[0, 0, 0]} ref={rotater}>
@@ -17,7 +18,8 @@ function Rig({ children }) {
   )
 }
 
-export default function ThreeCanvas() {
+export default function ThreeCanvas({scrollTop}) {
+  const caseRef = useRef()
 	
   return(
 	<div className="backgroundCanvas">
@@ -31,14 +33,14 @@ export default function ThreeCanvas() {
 		<color attach="background" args={["#FFFBF8"]} />
 		<ambientLight />
 		<pointLight position={[10, 10, 10]} />
-		<Rig>
+		<Rig scrollTop={scrollTop} ref={caseRef}>
 			<Suspense
 				fallback={
 			  	<Html center>
 					<Loader />
 			  	</Html>
 				}>
-			  	<Model scale={75} />
+			  	<Case scale={75} />
 			</Suspense>
 		</Rig>
 		

@@ -59,7 +59,6 @@ export default function Home() {
       </Head>
       <div className={styles.mobileLogoGradient}></div>
       <Nav scrollTop={scrollTop}/>
-      <ThreeCanvas/>
       <main>
         <div className={styles.heroLogo} id="heroLogo" style={{height: 80 + ((scrollTop - 20)/100) * 40 + 'px'}}>
           <Logo/>
@@ -68,6 +67,7 @@ export default function Home() {
           <div className={styles.heroCopy}>
             <h1>A new way to experience the digital world.</h1>
             <p>Molecule is  finibus, tortor sed condimentum luctus, diam felis rutrum nunc, vel condimentum sapien nibh eget magna. Quisque malesuada tincidunt purus, sit amet euismod erat feugiat quis.</p>
+            <a className={styles.button}>Pre-Order</a>
           </div>
           <div className={styles.flatRender}>
             <Image
@@ -121,7 +121,7 @@ export default function Home() {
         
         </div>
       </main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
