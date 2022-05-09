@@ -195,7 +195,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div class="container">
+            <div className="container">
               <div className={styles.softwareFeatures}>
                 <div className={styles.softwareHolder}>
                   <Image className={styles.placeholderImage} src={caseEmpty} alt="empty case"/>
