@@ -16,7 +16,7 @@ export default function Footer() {
 					<a href="" target="_blank"> Terms</a> |
 					<a href="" target="_blank"> Cookie Preferences</a>
 				</p>
-				<p class={styles.copyright}>©2022 All Rights Reserved by Molecule</p>
+				<p className={styles.copyright}>©2022 All Rights Reserved by Molecule</p>
 			</div>
 		</div>
 	    <ul>
