@@ -1,0 +1,129 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #FFFBF8
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  width: 80vw;
+  margin: 0 auto;
+}
+* {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0C0C0C;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3,  h4, h5, h6 {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.backgroundCanvas {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+}
+
+.button {
+  box-sizing: border-box;
+  border-radius: 6px; 
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.buttonPrimary {
+  background: #653EBF;
+  color: white;
+  font-size: 18px;
+  padding: 16px 30px;
+  
+  &:hover {
+    background: #4A347C;
+  }
+  
+  &.white {
+    color: #653EBF;
+    background: #fff;
+    
+    &:hover {
+      background: #ddd;
+    }
+  }
+}
+
+.buttonSecondary {
+  color: #653EBF;
+  border: 4px solid #653EBF;
+  padding: 12px 26px;
+  
+  &:hover {
+    border-color: #4A347C;
+    color: #4A347C;
+  }
+  
+  &.white {
+    color: #fff;
+    border-color: #fff;
+    
+    &:hover {
+      color: #ddd;
+      border-color: #ddd;
+    }
+  }
+}
+
+.buttonTertiary {
+  color: #653EBF;
+  border: none;
+  padding: 16px 20px;
+  
+  &:hover {
+    color: #4A347C;
+  }
+}
+
+.buttonWithDisclaimer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonDisclaimer {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px !important;
+  color:#7C7789;
+}
+
+.groupedButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  height: auto;
+  min-height: 100%;
+}
+
+.largerImage {
+  width: 80vw;
+}
