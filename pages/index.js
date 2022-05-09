@@ -22,6 +22,10 @@ import testUIScroll from '../public/scrollTest.png'
 import homepage from '../public/home.png'
 import webBrowser from '../public/webBrowser.png'
 
+import homeFull from '../public/homeFull.png'
+import browserFull from '../public/browserFull.png'
+import savedFull from '../public/savedFull.png'
+
 import Nav from '../components/nav.js'
 import ThreeCanvas from '../components/threeCanvas.js'
 import Footer from '../components/footer.js'
@@ -42,9 +46,12 @@ function Feature({tag, header, description, image}) {
   )
 }
 
-function SoftwarePillar({tag, header, description}) {
+function SoftwarePillar({tag, header, description, image}) {
   return (
   <div className={styles.softwarePillar}>
+    <div className={styles.pillarImage}>
+      <Image src={image} alt="flat render" />
+    </div>
     <div className={styles.pillarHeader}>
       <span>{tag}</span>
       <h3>{header}</h3>
@@ -212,16 +219,19 @@ export default function Home() {
                     <Image src={testUIScroll} alt="empty case"/>
                   </div>
                 </div>
-                <div id="softwarePillars">
+                <div id="softwarePillars" className={styles.softwarePillars}>
                   <SoftwarePillar
+                    image={homeFull}
                     tag="Homepage"
                     header="All the app's a canvas"
                     description="Molecule’s home page features an interactive canvas for quick note-taking, provides quick access to Saved Items, and lets you switch between apps with the menu at the top."/>
                   <SoftwarePillar
+                    image={browserFull}
                     tag="Web Browser"
                     header="Weave your own Web."
                     description="What if the Internet were a more organized place to browse your hobbies and interests? Molecule’s web browser provides a streamlined view with a focus on important tasks — like note-taking, saving items, and picking up where you left off."/>
                   <SoftwarePillar
+                    image={savedFull}
                     tag="Saved Items"
                     header="Never lose what you love."
                     description="The Saved Items feature gives you a centralized location to access web articles, notes, photos, documents, and anything else you want to save.

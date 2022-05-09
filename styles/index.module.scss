@@ -100,6 +100,10 @@
 				margin: 0 auto;
 				display: flex;
 				justify-content: center;
+				
+				@media only screen and (max-width: 1000px) {
+					width: 90vw;
+				}
 			}
 		}
 		
@@ -108,6 +112,12 @@
 			grid-template-columns: 3fr 2fr;
 			gap: 20px;
 			position: relative;
+			
+			@media only screen and (max-width: 900px) {
+				display: flex;
+				flex-direction: column;
+				padding: 72px 0;
+			}
 			
 			.softwareHolder {
 				height: 1000px;
@@ -118,11 +128,16 @@
 				position: sticky;
 				top: 0;
 				
+				@media only screen and (max-width: 900px) {
+					display: none;
+				}
+			
+				
 				.placeholderImage {
 					opacity: 0;
 					flex-shrink: 0;
 				}
-				
+								
 				&:before, &:after {
 					content: '';
 					background: #FFFBF8;
@@ -132,6 +147,19 @@
 					flex-shrink: 1;
 				}
 				
+				&:before {
+					@media only screen and (max-width: 900px) {
+						height: 0;
+					}
+				}
+				
+				&:after {
+					@media only screen and (max-width: 900px) {
+						height: 500px;
+						position: relative;
+						top: 100px;
+					}
+				}
 				
 				.staticCase {
 					display: flex;
@@ -140,6 +168,10 @@
 					height: 1000px;
 					position: absolute;
 					z-index: 200;
+					@media only screen and (max-width: 900px) {
+						justify-content: flex-start;
+						padding-top: 150px;
+					}
 				}
 				
 				.testUIScroll {
@@ -150,6 +182,11 @@
 					flex-direction: column;
 					justify-content: center;
 					
+					@media only screen and (max-width: 900px) {
+						justify-content: flex-start;
+						padding-top: 150px;
+					}
+										
 					img {
 						height: 100%;
 					}
@@ -159,10 +196,16 @@
 				.testUIScroll1 {
 					top: 0;
 				}
+			}
+			
+			.softwarePillars {
+				z-index: 205;
 				
-				// .testUIScroll2 {
-				// 	transform: translateY(200px);
-				// }
+				@media only screen and (max-width: 900px) {
+					display: flex;
+					flex-direction: column;
+					gap: 64px;
+				}
 			}
 			
 			.softwarePillar {
@@ -173,6 +216,20 @@
 				height: 1000px;
 				gap: 18px;
 				padding-left: 24px;
+				
+				.pillarImage {
+					display: none;
+					
+					@media only screen and (max-width: 900px) {
+						display: block;
+					}
+				}
+				
+				@media only screen and (max-width: 900px) {
+					justify-content: flex-start;
+					height: auto;
+				}
+				
 				
 				.pillarHeader {
 					display: flex;
@@ -220,13 +277,22 @@
 				position: relative;
 				top: -360px;
 				margin-bottom: -360px;
+				
+				@media only screen and (max-width: 1100px) {
+					top: -124px;
+					margin-bottom: -124px;
+				}
 			}
 			
 			.modularAccessories {
 				display: grid;
-				grid-template-columns: 2fr 3fr;
+				grid-template-columns: 9fr 11fr;
 				gap: 40px;
 				padding: 0 10vw;
+				
+				@media only screen and (max-width: 1000px) {
+					grid-template-columns: 1fr;
+				}
 				
 				.featureText, .featureImage {
 					align-self: center
@@ -255,7 +321,8 @@
 					}
 					
 					h3 {
-						font-size: 36px;
+						font-weight: 500;
+						font-size: 30px;
 						color: #E0674D;
 						margin-bottom: 16px;
 					}
@@ -270,7 +337,7 @@
 				display: grid;
 				gap: 40px;
 				
-				@media only screen and (max-width: 540px) {
+				@media only screen and (max-width: 800px) {
 					display: flex;
 					flex-direction: column;
 					height: 100%;
@@ -278,13 +345,17 @@
 				}
 				
 				.featureText, .featureImage {
-					align-self: center
+					align-self: center;
 				}
 				
 				.featureText {
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
+					
+					@media only screen and (max-width: 800px) {
+						padding: 0 10vw;
+					}
 					
 					
 					span, h3, p {
@@ -304,7 +375,8 @@
 					}
 					
 					h3 {
-						font-size: 36px;
+						font-weight: 500;
+						font-size: 30px;
 						color: #E0674D;
 						margin-bottom: 16px;
 					}
@@ -333,18 +405,36 @@
 					color: white;
 					padding: 120px 0 120px;
 					
+					@media only screen and (max-width: 1100px) {
+						padding-bottom: 160px;
+					}
+					
 					.twoColumn {
 						display: grid;
-						grid-template-columns: 3fr 2fr;	
+						grid-template-columns: 11fr 9fr;	
 						gap: 40px;
+						
+						@media only screen and (max-width: 1100px) {
+							display: flex;
+							flex-direction: column;
+							gap: 20px;
+						}
 					}
 					
 					.hardwareTitle {
 						padding-left: 10vw;
+						
+						@media only screen and (max-width: 1100px) {
+							padding: 0 10vw;
+						}
 					}
 					
 					.paragraphs {
 						padding-right: 10vw;
+						
+						@media only screen and (max-width: 1100px) {
+							padding: 0 10vw;
+						}
 					}
 					
 					h2, p, span {
@@ -373,24 +463,29 @@
 						display: flex;
 						flex-direction: column;
 						gap: 48px;
+						
+						@media only screen and (max-width: 1100px) {
+							gap: 20px;
+						}
 					}
 				}
 				
 				.featureGrid {
 					&:nth-child(1) {
 						.featureText {
-							padding-top: 96px;
+							align-self: flex-end;
 						}
 					}
 					
 					&:nth-child(even) {
-						grid-template-columns: 2fr 3fr;
+						grid-template-columns: 9fr 11fr;
 						
 						.featureImage {
 							order: 2;
 							
-							@media only screen and (max-width: 540px) {
+							@media only screen and (max-width: 800px) {
 								order: 1;
+								padding-left: 10vw;
 							}
 						}
 						
@@ -398,61 +493,27 @@
 							order: 1;
 							padding-left: 10vw;
 							
-							@media only screen and (max-width: 540px) {
+							@media only screen and (max-width: 800px) {
 								order: 2;
 							}
 						}
 					}
 					
 					&:nth-child(odd) {
-						grid-template-columns: 3fr 2fr;
+						grid-template-columns: 11fr 9fr;
 						
 						
 						.featureImage {
 							order: 1;
+							
+							@media only screen and (max-width: 800px) {
+								padding-right: 10vw;
+							}
 						}
 						
 						.featureText {
 							order: 2;
 							padding-right: 10vw;
-						}
-					}
-				}
-			}
-			
-			.software {
-				// margin-top: 100px;
-				
-				.featureGrid {
-					&:nth-child(odd) {
-						grid-template-columns: 2fr 3fr;
-						
-						.featureImage {
-							order: 2;
-							
-							@media only screen and (max-width: 540px) {
-								order: 1;
-							}
-						}
-						
-						.featureText {
-							order: 1;
-							
-							@media only screen and (max-width: 540px) {
-								order: 2;
-							}
-						}
-					}
-					
-					&:nth-child(even) {
-						grid-template-columns: 3fr 2fr;
-						
-						.featureImage {
-							order: 1
-						}
-						
-						.featureText {
-							order: 2
 						}
 					}
 				}
