@@ -109,7 +109,7 @@ export default function Home() {
         <div className={styles.hero}>
           <div className={styles.heroContent}>
             <div className={styles.heroCopy}>
-              <h1>Software shouldn't be this hard!</h1>
+              <h1>Software shouldn&#39;t be this hard!</h1>
               <p>
                 We built Molecule with a mission to make an accessible experience that doesn’t compromise on aesthetics. 
                 <b> If you’ve ever felt like technology wasn’t made for you, we’re here to help.</b>
@@ -132,7 +132,7 @@ export default function Home() {
               <div className={`${styles.twoColumn}`}>
                 <div className={styles.hardwareTitle}>
                   <span>Modern technology isn’t made for you</span>
-                  <h2>That's not your fault.</h2>
+                  <h2>That&#39;s not your fault.</h2>
                 </div>
                 <div className={styles.paragraphs}>
                   <p>
