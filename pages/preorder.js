@@ -25,7 +25,54 @@ export default function About() {
 			<Logo/>	
 		</div>
 		<main>
-			
+			<div className={`${styles.preorderHero} container`}>
+				<h1>Sign-up to be notified</h1>
+				<p>Enter your email to be notified when Molecule is avaliable to purchase</p>
+				<form>
+					
+				</form>
+				<span>You will not be opted in to any other e-mail communications by entering your email here.</span>
+			</div>
+			<div className={`${styles.preorderSale} container`}>
+				<div>
+					<h2>The Base Kit</h2>
+					<div className={styles.baseKit}>
+					
+					</div>
+				</div>
+				<div>
+					<h2>Expandable Accessories</h2>
+					<div className={styles.threeColumns}>
+						<div className={styles.accessory}>
+							<div className={styles.accessoryText}>
+								<h4>Printer</h4>
+								<p>$200</p>
+							</div>
+							<div className={styles.imageHolder}>
+							
+							</div>
+						</div>
+						<div className={styles.accessory}>
+							<div className={styles.accessoryText}>
+								<h4>Keyboard</h4>
+								<p>$75</p>
+							</div>
+							<div className={styles.imageHolder}>
+							
+							</div>
+						</div>
+						<div className={styles.accessory}>
+							<div className={styles.accessoryText}>
+								<h4>Hearing Loop</h4>
+								<p>$50</p>
+							</div>
+							<div className={styles.imageHolder}>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<Footer/>
 	</div>
