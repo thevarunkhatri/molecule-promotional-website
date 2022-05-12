@@ -20,9 +20,9 @@ export default function Footer() {
 			</div>
 		</div>
 	    <ul>
-		  	<a href="" target="_blank"><li>Facebook <Arrow/></li></a>
-		  	<a href="" target="_blank"><li>Instagram <Arrow/></li></a>
-		  	<a href="" target="_blank"><li>Vimeo <Arrow/></li></a>
+		  	<a href="https://www.facebook.com/getmoleculeapp" target="_blank"><li>Facebook <Arrow/></li></a>
+		  	<a href="https://www.instagram.com/molecule.app/" target="_blank"><li>Instagram <Arrow/></li></a>
+		  	<a href="https://vimeo.com/705576059" target="_blank"><li>Vimeo <Arrow/></li></a>
 		  	<a href="" target="_blank" className="buttonSecondary white"><li>Pre-Order</li></a>
 	    </ul>
 	  </div>

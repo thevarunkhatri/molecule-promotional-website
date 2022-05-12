@@ -9,14 +9,14 @@ export default function Nav({scrollTop, embeddedLogo}) {
   return (
 	<nav className={scrollTop > 20 ?  `${styles.hidden} ${styles.navigation}` : styles.navigation}>
 		<ul>
-		  <li><a href="https://www.google.com">Hardware</a></li>
-		  <li><a href="https://www.google.com">Software</a></li>
+		  <li><Link href="/#hardware" scroll={false}><a>Hardware</a></Link></li>
+		  <li><Link href="/#software" scroll={false}><a>Software</a></Link></li>
 		  <li className="logoPlaceholder"><Link href="/"><a>
 			  {embeddedLogo ? <Logo/> : null}
 		  </a></Link></li>
 		  <li><Link href="/about"><a>About</a></Link></li>
-		  <li><a href="https://www.google.com">Pre-Order</a></li>
-		</ul>
+		  <li><Link href="/preorder"><a>Preorder</a></Link></li>
+		</ul>	
 	 </nav>  
   )
 }

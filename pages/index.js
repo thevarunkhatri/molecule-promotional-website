@@ -123,8 +123,8 @@ export default function Home() {
               </p>
             </div>
             <div className="groupedButtons">
-              <a className="button buttonPrimary">See How</a>
-              <a className="button buttonSecondary">Pre-Order $299</a>
+              <Link href="/#hardware"><a className="button buttonPrimary">See How</a></Link>
+              <Link href="/#preorder"><a className="button buttonSecondary">Pre-Order $299</a></Link>
             </div>
           </div>
           <div className={styles.heroImage}>
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.features}>
-          <div className={`${styles.hardware}`}>
+          <div className={`${styles.hardware}`} id="hardware">
             <div className={styles.hardwareHeader}>
               <div className={`${styles.twoColumn}`}>
                 <div className={styles.hardwareTitle}>
@@ -187,7 +187,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`${styles.software}`}>
+          <div className={`${styles.software}`} id="software">
             <div className={styles.softwareHeader}>
               <div className="container">
                 <h2>An app that’s made for you.</h2>
@@ -240,6 +240,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div id="preorder">
+        
         </div>
       </main>
       <Footer/>

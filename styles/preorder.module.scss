@@ -1,0 +1,18 @@
+.wrapper {
+	.logo {
+		position: fixed;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		top: 20px;
+		z-index: 150;
+		
+		svg {
+			height: 80px;
+		}
+	}
+	
+	main {
+		
+	}
+}

@@ -7,6 +7,8 @@
 	z-index: 500;
 	opacity: 1;
 	transition: all 320ms cubic-bezier(0.83, 0, 0.17, 1);
+	color: black;
+	mix-blend-mode: difference;
 	
 	&.hidden {
 	  opacity: 0 !important;
@@ -45,6 +47,7 @@
 				justify-content: center;
 				flex-direction: column;
 				text-align: center;
+				color: white;
 			}
 			
 			&.logoPlaceholder {
