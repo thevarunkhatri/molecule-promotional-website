@@ -36,7 +36,7 @@ export default function About() {
 					<p>Enter your email to be notified when Molecule is avaliable to purchase</p>
 					<form>
 						<input type="email" id="email" name="email" placeholder="Your Email" required/>
-						<input type="submit" class="button buttonPrimary white" value="Pre-Order"/>
+						<input type="submit" className="button buttonPrimary white" value="Pre-Order"/>
 					</form>
 					<span><Information/> You will not be opted in to any other e-mail communications by entering your email here.</span>
 				</div>
@@ -51,7 +51,7 @@ export default function About() {
 								<h2>Base Kit</h2>
 								<p>Case | Stylus | App Dock + 3 Cubes</p>
 							</div>
-							<a class="button buttonPrimary">Pre-Order ($299)</a>
+							<a className="button buttonPrimary">Pre-Order ($299)</a>
 						</div>
 					</div>
 				</div>
