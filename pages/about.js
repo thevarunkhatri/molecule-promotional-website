@@ -45,17 +45,22 @@ export default function About() {
 					<div className={styles.ourStoryText}>
 						<span>Our Story</span>
 						<h3>The digital divide brought us together.</h3>
-						<p>The Molecule Case gives you three new buttons for the things you do most. Get back home, go back one step, and get help when you need it using the side buttons. Add some copy about what our story of creating Molecule.</p>
+						<p>We all have someone older than us that we look up to. Whether it’s a mentor, a loved one, or someone else who’s invested in us, the advice of someone who’s been around longer than you is invaluable.</p>
+					    <p>But we saw a need in those people. Unfortunately, modern technology is not designed with older adults in mind, and often seeks to remove agency from them instead of returning it. That’s not okay.</p>
+						<p>We want to give back to the people in our lives who helped us, so we set out to make a system that lets anyone — regardless of age or accessibility needs — use digital technology to its fullest.</p>
 					</div>
 				</div>
 			</div>
 			<div className={styles.impact}>
 				<div className={styles.impactText}>
-				  <h2>Made for everyone.</h2>
-				  <span>Design with accessibility needs in mind</span>
-				  <p>The Molecule Case gives you three new buttons for the things you do most. Get back home, go back one step, and get help when you need it using the side buttons. Add some copy about what our story of creating Molecule.</p>
+				  <h2>Made for older adults,</h2>
+				  <span>Improving accessibility for everyone</span>
+				  <p>We believe technology is for everyone, and that includes older adults and others with accessibility needs. One of the great things about designing for older adults is that every accessibility need they have is shared with another demographic. </p>
+				  <p>For example, there are children who struggle with vision, or middle-aged people that struggle with motor function. By designing for older adults, we’re paving the way for many others.</p>
 				</div>
-				<Image src={ImpactPeople} alt="Target Audience"/>
+				<div className={styles.impactImage}>
+					<Image src={ImpactPeople} alt="Target Audience"/>
+				</div>
 			</div>
 			<div className={styles.video}>
 				<div className={`${styles.videoOffset} container`}>
@@ -71,7 +76,7 @@ export default function About() {
 						responsive={true}
 						/>
 					</div>
-					<p>A peek into the Molecule world</p>
+					<p>Watch: our vision for Molecule, a product that broadens your ability to utilize the digital world.</p>
 				</div>
 			</div>
 			<div className={`${styles.team} container`}>
@@ -104,18 +109,18 @@ export default function About() {
 					<div className={styles.documentationText}>
 						<span>Documentation</span>
 						<h3>Learn more about Molecule</h3>
-						<p>Get the help you want with 24/7 support anytime <a href="https://help.getmolecule.app">help.getmolecule.app</a> new buttons for the things you do most. Get back home, go back one step, and get help when you need it using the side buttons.</p>
+						<p>If you’d like to learn more about Molecule and how it works, visit <a href="https://help.getmolecule.app">help.getmolecule.app</a> for our support guides. Or, visit our home page for more information about the Molecule ecosystem.</p>
 					</div>
 					<Image src={Documentation} alt="Documentation illustration" />
 				</div>
 			</div>
-			<div className={styles.preorder}>
+			<div className={`${styles.preorder} container`}>
 				<div className={styles.preorderText}>
 					<h2>An app that&#39;s made for you</h2>
 					<p>Molecule App is free and always will be. You don’t need a subscription to access full functionality: every feature, unlimited saved items, and support documentation are all include</p>
 				</div>
 				<a className="button buttonPrimary">Pre-Order Now</a>
-				<div className={`${styles.preorderCase} container`}>
+				<div className={`${styles.preorderCase}`}>
 					<Image src={PreorderCase} alt="cut off Molecule case"/>
 				</div>
 			</div>

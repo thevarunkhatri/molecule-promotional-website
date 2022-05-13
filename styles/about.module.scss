@@ -22,6 +22,10 @@
 			background-size: cover;
 			background-position: bottom;
 			
+			@media only screen and (max-width: 800px) {
+				padding: 200px 5vw;
+			}
+			
 			h1 {
 				max-width: 800px;
 				text-align: center;
@@ -37,8 +41,11 @@
 		
 		.ourStory {
 			background-color: #4A347C;
-			padding: 0;
+			padding: 40px 0;
 			
+			@media only screen and (max-width: 800px) {
+				padding-bottom: 100px;
+			}
 			
 			.container {
 				display: grid;
@@ -46,7 +53,11 @@
 			}
 			
 			.ourStoryImage {
-				transform: scale(1.25) translate(-20%, -20%)
+				transform: scale(1.25) translate(-20%, -20%);
+				
+				@media only screen and (max-width: 800px) {
+					transform: scale(1.20) translate(-22.5%, -15%)
+				}
 			}
 			
 			.ourStoryText {
@@ -84,7 +95,6 @@
 		}
 		
 		.impact {
-			display: flex;
 			justify-content: flex-end;
 			padding: 100px 0 300px calc((100vw - 1400px)/2);
 			margin: 0 auto;
@@ -96,10 +106,28 @@
 				padding: 100px 0 300px 10vw;
 			}
 			
+			@media only screen and (max-width: 800px) {
+				display: flex;
+				flex-direction: column-reverse;
+				padding: 100px 0 100px 10vw;
+			}
+			
+			@media only screen and (max-width: 640px) {
+				padding: 100px 0 100px 5vw;
+			}
+			
 			.impactText {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
+				
+				@media only screen and (max-width: 800px) {
+					padding-right: 10vw;
+				}
+				
+				@media only screen and (max-width: 640px) {
+					padding-right: 5vw;
+				}
 				
 				h2, span, p {
 					margin: 0;
@@ -123,6 +151,12 @@
 					font-size: 16px;
 					line-height: 27px;
 				}
+			}
+			
+			.impactImage {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
 			}
 		}
 		
@@ -167,6 +201,11 @@
 				display: grid;
 				grid-template-columns: repeat(5, 1fr);
 				gap: 20px;
+				
+				@media only screen and (max-width: 640px) {
+					display: flex;
+					flex-direction: column;
+				}
 			}
 			
 			h4 {
@@ -178,6 +217,20 @@
 		.documentation {
 			background: #4A347C;
 			padding: 12px 0;
+			
+			@media only screen and (max-width: 1000px) {
+				padding: 48px 0;
+			}
+			
+			@media only screen and (max-width: 720px) {
+				padding: 100px 0;
+			}
+			
+			a {
+				text-decoration: underline;
+				color: #4DB892;
+				font-weight: bold;
+			}
 			
 			.documentationText {
 				display: flex;

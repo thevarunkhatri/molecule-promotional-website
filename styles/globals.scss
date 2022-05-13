@@ -142,4 +142,9 @@ h1, h2, h3,  h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
