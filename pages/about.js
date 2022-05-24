@@ -10,7 +10,7 @@ import styles from '../styles/about.module.scss'
 
 import Documentation from '../public/documentation.png'
 import PreorderCase from '../public/preorderCase.png'
-import Ecosystem from '../public/ecosystem.png'
+import Ecosystem from '../public/Website/combined.png'
 import ImpactPeople from '../public/impactPeople.png'
 import Varun from '../public/varun.png'
 import Nandika from '../public/nandika.png'

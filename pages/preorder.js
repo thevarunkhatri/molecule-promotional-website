@@ -10,7 +10,7 @@ import Stars from '../public/stars.svg'
 import Information from '../public/information-circle.svg'
 import MoreCubes from '../public/moreCubes.svg'
 
-import Basekit from '../public/basekit.png'
+import Basekit from '../public/Website/basekit.png'
 
 import styles from '../styles/preorder.module.scss'
 
@@ -73,17 +73,6 @@ export default function About() {
 							<div className={styles.accessoryText}>
 								<h4>Keyboard</h4>
 								<p>$75</p>
-							</div>
-							<div className={styles.imageHolder}>
-								<div className={styles.hoverEffect}>
-									<a className="button buttonPrimary">Add to Cart</a>
-								</div>
-							</div>
-						</div>
-						<div className={styles.accessory}>
-							<div className={styles.accessoryText}>
-								<h4>Hearing Loop</h4>
-								<p>$50</p>
 							</div>
 							<div className={styles.imageHolder}>
 								<div className={styles.hoverEffect}>

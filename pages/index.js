@@ -6,17 +6,17 @@ import Link from 'next/link'
 
 import styles from '../styles/index.module.scss'
 import Logo from '../public/logo.svg'
-import heroImage from '../public/heroImage.png'
+import heroImage from '../public/Website/fannedOut.png'
 import flatRender from '../public/flatRender.png'
 import pen from '../public/pen.png'
 import appDock from '../public/appDock.png'
 import caseEmpty from '../public/caseEmpty.png'
 
-import Case from '../public/flatCut.png'
+import Case from '../public/Website/case.png'
 import PenOnTablet from '../public/penOnTablet.png'
-import AppCubes from '../public/appCubes.png'
-import Printer from '../public/printer.png'
-import Keyboard from '../public/keyboard.png'
+import AppCubes from '../public/Website/appDock.png'
+import Printer from '../public/Website/printer.png'
+import Keyboard from '../public/Website/keyboard.png'
 
 import testUIScroll from '../public/scrollTest.png'
 import homepage from '../public/home.png'
@@ -178,7 +178,7 @@ export default function Home() {
                 <div className={styles.featureText}>
                   <span>Modular Accessories</span>
                   <h3>Expandable accessories. <br/> Infinite possibilities!</h3>
-                  <p>Sometimes you just don’t want to use your finger, and that’s okay. The Molecule Pen gives you precision-pointing superpowers and the ability to write in text fields instead of typing.</p>
+                  <p>There’s more to the story than the Case, Blocks, and Pen. Molecule’s modular system means we can constantly develop new ways for you to interact with technology, making it even more accessible.</p>
                 </div>
               </div>
               <div className={styles.keyboardImage}>
